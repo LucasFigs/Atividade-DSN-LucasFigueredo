@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="container"><!-- Delimita a área do conversor -->
+        <div class="card"> <!-- Flex conteiner que garante que elementos filhos sejam organizados -->
+            <h1>Conversor de moedas</h1> <!-- Título do site -->
+            <label name="labelMoedaOrigem" for="moedaOrigem" id="labelMoedaOrigem">Selecione a moeda de origem</label> 
+            <select name="selectMoeda" id="moedaOrigem"></select> <!-- Seletor das moedas, as opções estão sendo incluídas via JS -->
+            <label name="labelMoedaDestino" for="moedaDestino" id="labelMoedaDestino">Selecione a moeda destino</label> 
+            <select name="selectMoeda" id="moedaDestino"></select>
+            <label for="valor" id="labelValor">Valor a converter</label> <!-- título da entrada de texto, importante utilizar o for para relacionar com a entrada de texto -->
+            <input type="text" name="valor" id="valor" placeholder="Digite um valor"> <!-- o placeholder é importante pois é a dica de ferramenta -->
+            <input type="button" name="converter" id="converter" value="converter" onclick={converterValor()}> <!-- input tipo button, pois o button tende a fazer um submit e atualizar a página, o onclick chama a função do JS -->
+            <p id="resultado"></p> <!-- resultado passado via JS -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
