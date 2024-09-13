@@ -3,7 +3,7 @@ const moedas = [
   { "nome": "Euro", "valor_em_dolar": 1.12 },
   { "nome": "Libra Esterlina", "valor_em_dolar": 1.38 },
   { "nome": "Iene Japonês", "valor_em_dolar": 0.0092 },
-  { "nome": "Real Brasileiro", "valor_em_dolar": 0.19 },
+  { "nome": "Real Brasileiro", "valor_em_dolar": 0.1777 },
   { "nome": "Dólar Canadense", "valor_em_dolar": 0.80 },
   { "nome": "Dólar Australiano", "valor_em_dolar": 0.76 },
   { "nome": "Franco Suíço", "valor_em_dolar": 1.08 },
