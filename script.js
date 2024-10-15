@@ -3,7 +3,7 @@ const moedas = [
   { "nome": "Euro", "valor_em_dolar": 1.12 },
   { "nome": "Libra Esterlina", "valor_em_dolar": 1.38 },
   { "nome": "Iene Japonês", "valor_em_dolar": 0.0092 },
-  { "nome": "Real Brasileiro", "valor_em_dolar": 0.1777 },
+  { "nome": "Real Brasileiro", "valor_em_dolar": 0.19 },
   { "nome": "Dólar Canadense", "valor_em_dolar": 0.80 },
   { "nome": "Dólar Australiano", "valor_em_dolar": 0.76 },
   { "nome": "Franco Suíço", "valor_em_dolar": 1.08 },
@@ -83,7 +83,7 @@ window.addEventListener('DOMContentLoaded', selectSelectors); //chama a função
 
 // função de converter o valor
 function converterValor() {
-  const valorAConverter = parseFloat(document.getElementById('valor').value.replace(/,/g,'.')); // captura valor digitado e converte em número
+  const valorAConverter = parseFloat(document.getElementById('valor').value.replace(/,/g, '.')); // captura valor digitado e converte em número
   console.log(valorAConverter);
 
   const moedaOrigemIndex = document.getElementById('moedaOrigem').selectedIndex; // capitura o index da moeda de origem selecionada
@@ -96,9 +96,9 @@ function converterValor() {
   const moedaDestinoIndex = document.getElementById('moedaDestino').selectedIndex; // capitura o index da moeda de destino selecionada
   const valorMoedaDestinoEmDolar = moedas[moedaDestinoIndex].valor_em_dolar; //busca o valor da moeda destino selecionada em dolar a partir do índice
 
-  const valorFinal = valorOrigemEmDolar/valorMoedaDestinoEmDolar;
+  const valorFinal = valorOrigemEmDolar / valorMoedaDestinoEmDolar;
 
-  document.getElementById('resultado').textContent = `O valor em Dolar é U$${valorFinal.toFixed(2)}`; // retorna o valor final
+  document.getElementById('resultado').textContent = `O valor em ${moedas[moedaDestinoIndex].nome} é U$${valorFinal.toFixed(2)}`; // retorna o valor final
 
 
 
